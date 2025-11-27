@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { truncate, timeAgo, copyToClipboard } from "../utils/helpers";
 import { api } from "../api/apiClient";
+import { Link } from "react-router-dom";
+
 
 export default function LinkTable({ links = [], onDelete }) {
   const [deleting, setDeleting] = useState(null);
@@ -77,12 +79,12 @@ export default function LinkTable({ links = [], onDelete }) {
                   Copy
                 </button>
 
-                <a
+                <Link
                   className="btn small ghost"
-                  href={`/code/${encodeURIComponent(l.code)}`}
+                  to={`/code/${encodeURIComponent(l.code)}`}
                 >
                   Stats
-                </a>
+                </Link>
 
                 <button
                   className="btn small warn"
