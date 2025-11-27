@@ -1,0 +1,10 @@
+# Prevent environment files
+.env
+**/.env
+*/.env
+
+# Prevent node_modules
+node_modules/
+
+# Prevent build artifacts
+dist/
